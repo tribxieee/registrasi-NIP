@@ -18,7 +18,7 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/regist-individu.css" />
+    <link rel="stylesheet" href="assets/css/complete-profile.css" />
   </head>
   <body>
     <section id="regist-individu">
@@ -55,17 +55,20 @@
               <div
                 class="top-bar d-flex justify-content-between align-items-center"
               >
-                <a href="index.html" class="text-decoration-none text-muted">
+                <a
+                  href="regist-individu.html"
+                  class="text-decoration-none text-muted"
+                >
                   <i class="bi bi-chevron-left"></i> Back
                 </a>
                 <div class="text-end">
-                  <small class="text-muted d-block">STEP 01/03</small>
+                  <small class="text-muted d-block">STEP 02/03</small>
                 </div>
               </div>
 
               <!-- form content -->
               <div class="content-wrapper">
-                <h2 class="fw-bold">Register Individual Account!</h2>
+                <h2 class="fw-bold">Complete Your Profile!</h2>
                 <p class="text-muted">
                   For the purpose of industry regulation, your details are
                   required.
@@ -74,59 +77,55 @@
                 <hr />
 
                 <form>
-                  <div class="field">
-                    <label class="form-label">Your fullname*</label>
-                    <input
-                      type="text"
-                      class="form-control is-active"
-                      placeholder="Invictus Innocent"
-                    />
-                  </div>
-
-                  <div class="field">
-                    <label class="form-label">Email address*</label>
-                    <input
-                      type="email"
-                      class="form-control"
-                      placeholder="Enter email address"
-                    />
-                  </div>
-
-                  <div class="field">
-                    <label class="form-label">Create password*</label>
-                    <div class="input-group">
-                      <input
-                        type="password"
-                        class="form-control"
-                        placeholder="Enter password"
-                      />
-                      <span class="input-group-text">Show</span>
+                  <form>
+                    <!-- Phone Number -->
+                    <div class="field">
+                      <label class="form-label">Phone number*</label>
+                      <div class="input-group">
+                        <span class="input-group-text country-code">
+                          <img
+                            src="https://flagcdn.com/w20/id.png"
+                            alt="Indonesia"
+                          />
+                          <span>+62</span>
+                        </span>
+                        <input
+                          type="tel"
+                          class="form-control"
+                          placeholder="81234567890"
+                        />
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="form-check mb-3">
-                    <input
-                      type="checkbox"
-                      class="form-check-input"
-                      id="terms"
-                    />
-                    <label class="form-check-label" for="terms">
-                      I agree to terms & conditions
-                    </label>
-                  </div>
+                    <!-- Address -->
+                    <div class="field">
+                      <label class="form-label">Your address*</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Street address, city"
+                      />
+                    </div>
+
+                    <!-- Province -->
+                    <div class="field">
+                      <label class="form-label">Province of residence*</label>
+                      <select class="form-control">
+                        <option value="" selected disabled>
+                          Please select province
+                        </option>
+                        <option>DKI Jakarta</option>
+                        <option>Jawa Barat</option>
+                        <option>Jawa Tengah</option>
+                        <option>Jawa Timur</option>
+                        <option>Bali</option>
+                        <!-- dst -->
+                      </select>
+                    </div>
+                  </form>
 
                   <button type="submit" class="btn btn-primary w-100">
-                    Continue
-                  </button>
-
-                  <div class="or-text">Or</div>
-
-                  <button type="button" class="btn btn-google w-100">
-                    <img 
-                      src="assets/img/google-logo.png"
-                      alt="Google"
-                    />
-                    Register with Google
+                    Register Account
                   </button>
                 </form>
               </div>
