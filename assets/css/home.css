@@ -161,13 +161,72 @@ body {
 
 /* Mobile Adjustments */
 @media (max-width: 991px) {
+  /* Layout utama */
   #home {
     flex-direction: column;
+    min-height: auto;
   }
+
+  /* Hero mati total */
   .hero-side {
     display: none;
-  } /* Sembunyikan sisi kiri di mobile untuk fokus form */
+  }
+
+  /* Form side */
   .form-side {
-    padding: 40px 20px;
+    padding: 24px 30px;
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  /* Top nav */
+  .top-nav {
+    margin-top: 0;
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 0.85rem;
+  }
+
+  /* Content width */
+  .content-wrapper {
+    max-width: 100%;
+    margin-top: 0;
+  }
+
+  /* Typography */
+  .content-wrapper h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .content-wrapper .desc {
+    font-size: 0.9rem;
+    margin-bottom: 28px;
+  }
+
+  /* Account card */
+  .account-type-card {
+    padding: 18px;
+    border-radius: 10px;
+    margin-bottom: 14px;
+  }
+
+  .icon-container {
+    width: 44px;
+    height: 44px;
+    font-size: 1.25rem;
+    margin-right: 14px;
+  }
+
+  .card-body-text h6 {
+    font-size: 0.95rem;
+  }
+
+  .card-body-text p {
+    font-size: 0.85rem;
+  }
+
+  .arrow-indicator {
+    font-size: 1rem;
   }
 }

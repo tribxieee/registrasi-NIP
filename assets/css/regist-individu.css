@@ -192,13 +192,67 @@ hr {
 
 /* Mobile Adjustments */
 @media (max-width: 991px) {
-  #home {
-    flex-direction: column;
-  }
+  /* Matikan hero */
   .hero-side {
     display: none;
-  } /* Sembunyikan sisi kiri di mobile untuk fokus form */
+  }
+
+  /* Layout utama */
+  #regist-individu {
+    min-height: auto;
+  }
+
+  /* Form side */
   .form-side {
-    padding: 40px 20px;
+    padding: 24px 20px;
+  }
+
+  /* Jangan center vertikal di mobile */
+  .form-inner {
+    min-height: auto;
+    justify-content: flex-start;
+  }
+
+  /* Top bar */
+  .top-bar {
+    padding: 0;
+    margin-bottom: 16px;
+    font-size: 0.85rem;
+  }
+
+  /* Konten */
+  .content-wrapper {
+    max-width: 100%;
+  }
+
+  .content-wrapper h2 {
+    font-size: 1.25rem;
+    margin-top: 0;
+  }
+
+  .content-wrapper p {
+    font-size: 0.8rem;
+    margin-bottom: 16px;
+  }
+
+  hr {
+    margin: 12px 0;
+  }
+
+  /* Field spacing */
+  .field {
+    margin-bottom: 12px;
+  }
+
+  /* Button */
+  .btn-primary {
+    padding: 11px;
+    font-size: 0.9rem;
+  }
+
+  .btn-google {
+    padding: 9px;
+    font-size: 0.85rem;
   }
 }
+
