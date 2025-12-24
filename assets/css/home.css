@@ -57,7 +57,7 @@ body {
 /* Panel Kanan (Form) */
 .form-side {
   background-color: #ffffff;
-  padding: 50px 8%;
+  padding: 100px 100px;
   display: flex;
   flex-direction: column;
 }
@@ -65,6 +65,7 @@ body {
 .top-nav {
   text-align: right;
   margin-bottom: 80px;
+  margin-top: -59px;
   font-size: 0.95rem;
 }
 
