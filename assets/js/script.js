@@ -72,6 +72,49 @@ if (step2Form) {
   });
 }
 
+// Sign-In FORM HANDLER
+const SignInForm = document.getElementById("SignInForm");
+if (SignInForm) {
+  const savedData = JSON.parse(localStorage.getItem("SignInData"));
+
+  if (savedData) {
+    document.getElementById("fullname").value = savedData.fullname || "";
+    document.getElementById("email").value = savedData.email || "";
+    document.getElementById("password").value = savedData.password || "";
+
+    const termsCheckbox = document.getElementById("checkbox");
+    if (termsCheckbox) {
+      termsCheckbox.checked = true;
+    }
+  }
+
+  SignInForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const fullname = document.getElementById("fullname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const password = document.getElementById("password").value;
+    const terms = document.getElementById("checkbox").checked;
+
+    if (!fullname || !email || !password) {
+      alert("Semua field wajib diisi");
+      return;
+    }
+
+    if (!terms) {
+      alert("Kamu harus setuju terms & conditions");
+      return;
+    }
+
+    localStorage.setItem(
+      "SignInData",
+      JSON.stringify({ fullname, email, password })
+    );
+
+    window.location.href = "success.html";
+  });
+}
+
 
 // PASSWORD TOGGLE VISIBILITY
 const passwordInput = document.getElementById("password");
