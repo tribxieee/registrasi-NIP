@@ -18,10 +18,10 @@
     />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="assets/css/sign-in.css" />
+    <link rel="stylesheet" href="assets/css/regist-business.css" />
   </head>
   <body>
-    <section id="sign-in">
+    <section id="regist-business">
       <div class="container-fluid p-0">
         <div class="row g-0">
           <div class="col-lg-5 hero-side d-none d-lg-flex">
@@ -58,11 +58,14 @@
                 <a href="index.html" class="text-decoration-none text-muted">
                   <i class="bi bi-chevron-left"></i> Back
                 </a>
+                <div class="text-end">
+                  <small class="text-muted d-block">STEP 01/02</small>
+                </div>
               </div>
 
               <!-- form content -->
               <div class="content-wrapper">
-                <h2 class="fw-bold">Sign-In Your Account!</h2>
+                <h2 class="fw-bold">Register Business Account!</h2>
                 <p class="text-muted">
                   For the purpose of industry regulation, your details are
                   required.
@@ -70,11 +73,11 @@
 
                 <hr />
 
-                <form id="SignInForm">
+                <form id="step1businessForm">
                   <div class="field">
-                    <label class="form-label">Your fullname*</label>
+                    <label class="form-label">Your Company Name*</label>
                     <input
-                      id="fullname"
+                      id="company-name"
                       type="text"
                       class="form-control is-active"
                       placeholder="Invictus Innocent"
@@ -82,9 +85,9 @@
                   </div>
 
                   <div class="field">
-                    <label class="form-label">Email address*</label>
+                    <label class="form-label">Email Company address*</label>
                     <input
-                      id="email"
+                      id="email-company"
                       type="email"
                       class="form-control"
                       placeholder="Enter email address"
@@ -119,7 +122,7 @@
                   </div>
 
                   <button type="submit" class="btn btn-primary w-100">
-                    Sign-In
+                    Continue
                   </button>
 
                   <div class="or-text">Or</div>
@@ -130,7 +133,7 @@
                     id="googleLogin"
                   >
                     <img src="assets/img/google-logo.png" alt="Google" />
-                    Sign In with Google
+                    Register with Google
                   </button>
                 </form>
               </div>

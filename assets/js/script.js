@@ -115,6 +115,81 @@ if (SignInForm) {
   });
 }
 
+// Business Register FORM HANDLER
+// STEP 1 BUSINESS FORM HANDLER
+const step1businessForm = document.getElementById("step1businessForm");
+if (step1businessForm) {
+  const savedData = JSON.parse(localStorage.getItem("registerbusinessData"));
+
+  if (savedData) {
+    document.getElementById("company-name").value = savedData.companyName || "";
+    document.getElementById("email-company").value = savedData.emailCompany || "";
+    document.getElementById("password").value = savedData.password || "";
+
+    const termsCheckbox = document.getElementById("checkbox");
+    if (termsCheckbox) {
+      termsCheckbox.checked = true;
+    }
+  }
+
+  step1Form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const companyName = document.getElementById("company-name").value.trim();
+    const emailCompany = document.getElementById("email-company").value.trim();
+    const password = document.getElementById("password").value;
+    const terms = document.getElementById("checkbox").checked;
+
+    if (!companyName || !emailCompany || !password) {
+      alert("Semua field wajib diisi");
+      return;
+    }
+
+    if (!terms) {
+      alert("Kamu harus setuju terms & conditions");
+      return;
+    }
+
+    localStorage.setItem(
+      "registerbusinessData",
+      JSON.stringify({ companyName, emailCompany, password })
+    );
+
+    window.location.href = "complete-business.html";
+  });
+}
+
+// STEP 2 BUSINESS FORM HANDLER
+const step2Form = document.getElementById("step2Form");
+
+if (step2Form) {
+  step2Form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const step1Data = JSON.parse(localStorage.getItem("registerData"));
+    if (!step1Data) {
+      alert("Data step 1 hilang. Ulangi pendaftaran.");
+      window.location.href = "regist-individu.html";
+      return;
+    }
+
+    const phone = document.getElementById("phone").value.trim();
+    const address = document.getElementById("address").value.trim();
+    const province = document.getElementById("province").value;
+
+    if (!phone || !address || !province) {
+      alert("Semua field wajib diisi");
+      return;
+    }
+
+    const finalData = { ...step1Data, phone, address, province };
+    console.log("FINAL REGISTER DATA:", finalData);
+
+    localStorage.removeItem("registerData");
+    window.location.href = "success.html";
+  });
+}
+
 
 // PASSWORD TOGGLE VISIBILITY
 const passwordInput = document.getElementById("password");
