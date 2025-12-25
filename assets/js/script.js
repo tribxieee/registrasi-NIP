@@ -132,7 +132,7 @@ if (step1businessForm) {
     }
   }
 
-  step1Form.addEventListener("submit", function (e) {
+  step1businessForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
     const companyName = document.getElementById("company-name").value.trim();
@@ -160,16 +160,16 @@ if (step1businessForm) {
 }
 
 // STEP 2 BUSINESS FORM HANDLER
-const step2Form = document.getElementById("step2Form");
+const step2businessForm = document.getElementById("step2businessForm");
 
-if (step2Form) {
-  step2Form.addEventListener("submit", function (e) {
+if (step2businessForm) {
+  step2businessForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const step1Data = JSON.parse(localStorage.getItem("registerData"));
-    if (!step1Data) {
+    const step1businessData = JSON.parse(localStorage.getItem("registerbusinessData"));
+    if (!step1businessData) {
       alert("Data step 1 hilang. Ulangi pendaftaran.");
-      window.location.href = "regist-individu.html";
+      window.location.href = "regist-business.html";
       return;
     }
 
@@ -182,10 +182,10 @@ if (step2Form) {
       return;
     }
 
-    const finalData = { ...step1Data, phone, address, province };
-    console.log("FINAL REGISTER DATA:", finalData);
+    const finalbusinessData = { ...step1businessData, phone, address, province };
+    console.log("FINAL REGISTER BUSINESS DATA:", finalbusinessData);
 
-    localStorage.removeItem("registerData");
+    localStorage.removeItem("registerbusinessData");
     window.location.href = "success.html";
   });
 }
